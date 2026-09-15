@@ -245,3 +245,12 @@ body{background:#fff}.site-shell{background:#fff}.topline{height:38px;background
 
 /* Mobile Contact cards: spacious single-column layout */
 @media(max-width:800px){.page-contact .contact-channels{display:grid;grid-template-columns:1fr;gap:12px;padding-bottom:54px}.page-contact .contact-channels article{display:flex;align-items:flex-start;gap:14px;min-height:0;padding:18px 17px}.page-contact .contact-channel-icon{width:34px;height:34px;margin-top:2px}.page-contact .contact-channels article>div{min-width:0}.page-contact .contact-channels h3{font-size:16px;line-height:1.3;margin:5px 0}.page-contact .contact-channels p{font-size:10px;line-height:1.5;margin:0}.page-contact .contact-channels .mini-label{font-size:8px;letter-spacing:.12em}}
+
+/* Mobile navbar drawer on solid white */
+@media(max-width:800px){.page-home .nav-wrap{background:#fff}.page-home .nav-links.open{display:flex;background:#fff;color:var(--maroon);z-index:20;border-top:1px solid #eee5d8;box-shadow:0 12px 24px rgba(61,34,32,.14)}.page-home .nav-links.open>a{color:var(--maroon);background:#fff}.page-home .nav-links.open>a.active{color:var(--maroon)}.page-home .nav-links.open .nav-cta{background:var(--maroon);color:#fff8e8}.page-home .menu-btn{background:#fff;color:var(--maroon);position:relative;z-index:21}}
+
+/* Mobile navigation drawer must sit fully above page content */
+@media(max-width:800px){.nav-wrap{z-index:50;background:#fff}.nav-links.open{position:fixed;top:105px;left:0;right:0;z-index:100;display:flex;flex-direction:column;align-items:stretch;gap:0;min-height:calc(100vh - 105px);padding:10px 6% 28px;background:#fff!important;color:var(--maroon);border-top:1px solid #eee5d8;box-shadow:0 14px 28px rgba(61,34,32,.16);overflow-y:auto}.nav-links.open>a{display:flex;align-items:center;min-height:52px;padding:0;color:var(--maroon)!important;background:#fff!important;border-bottom:1px solid #f0e8dd}.nav-links.open>a.active{font-weight:700}.nav-links.open .nav-cta{display:flex;width:100%;min-height:46px;margin-top:18px;background:var(--maroon);color:#fff8e8}.menu-btn{position:relative;z-index:110;background:#fff!important;color:var(--maroon)}}
+
+/* Compact mobile navigation drawer */
+@media(max-width:800px){.nav-links.open{min-height:0;height:auto;max-height:calc(100vh - 105px);padding-bottom:22px;overflow-y:auto}.nav-links.open .nav-cta{margin-bottom:0}}
