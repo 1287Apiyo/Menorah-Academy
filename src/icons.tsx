@@ -1,7 +1,11 @@
 import type { ReactNode, SVGProps } from 'react'
 
-type IconProps = SVGProps<SVGSVGElement>
-const Icon = ({ children, ...props }: IconProps & { children: ReactNode }) => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>{children}</svg>
+type IconProps = SVGProps<SVGSVGElement> & { size?: number | string }
+const Icon = ({ children, size, width, height, ...props }: IconProps & { children: ReactNode }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" width={width ?? size} height={height ?? size} {...props}>
+    {children}
+  </svg>
+)
 export const ArrowRight = (p: IconProps) => <Icon {...p}><path d="M5 12h14M13 6l6 6-6 6" /></Icon>
 export const Check = (p: IconProps) => <Icon {...p}><path d="m5 12 4 4L19 6" /></Icon>
 export const ChevronDown = (p: IconProps) => <Icon {...p}><path d="m6 9 6 6 6-6" /></Icon>
